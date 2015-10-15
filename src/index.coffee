@@ -3,6 +3,7 @@ Copyright (c) 2015 Markus Kohlhase <mail@markus-kohlhase.de>
 ###
 
 React       = require "react"
+ReactDOM    = require "react-dom"
 App         = require "./components/App"
 store       = require "./Store"
 
@@ -19,8 +20,6 @@ rootElement  = document.querySelector 'body'
 Wrapper = React.createElement Provider, { store }, ->
   React.createElement ConnectedApp
 
-React.initializeTouchEvents yes
-
 if __DEVTOOLS__
   { DevTools, DebugPanel, LogMonitor } = require 'redux-devtools/lib/react'
   { div } = React.DOM
@@ -32,6 +31,6 @@ if __DEVTOOLS__
       bottom  : yes
       key     : "debugPanel",
       React.createElement DevTools, { store, monitor:LogMonitor }
-  React.render X, rootElement
+  ReactDOM.render X, rootElement
 else
-  React.render Wrapper, rootElement
+  ReactDOM.render Wrapper, rootElement
