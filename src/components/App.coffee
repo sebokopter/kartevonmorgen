@@ -4,7 +4,7 @@ require "./App.styl"
 
 React         = require "react"
 T             = React.PropTypes
-Pure          = require "react-pure-render/mixin"
+Pure          = require "react-addons-pure-render-mixin"
 V             = require "../constants/PanelView"
 Actions       = require "../Actions"
 EntryDetails  = require "./EntryDetails"

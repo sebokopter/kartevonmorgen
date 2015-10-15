@@ -1,7 +1,7 @@
 # Copyright (c) 2015 Markus Kohlhase <mail@markus-kohlhase.de>
 
 React = require "react"
-Pure  = require "react-pure-render/mixin"
+Pure  = require "react-addons-pure-render-mixin"
 
 { div, p, a,  h3, br }  = React.DOM
 
@@ -9,7 +9,7 @@ module.exports = React.createClass
 
   displayName: "Imprint"
 
-  mixins: [Pure]
+  mixins: [ Pure ]
 
   render: ->
     div className: "info",

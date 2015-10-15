@@ -1,7 +1,7 @@
 # Copyright (c) 2015 Markus Kohlhase <mail@markus-kohlhase.de>
 
 React     = require "react"
-PureMixin = require "react-pure-render/mixin"
+Pure      = require "react-addons-pure-render-mixin"
 
 { NAMES, CSS_CLASSES } = require "../constants/Categories"
 
@@ -11,7 +11,7 @@ module.exports = React.createClass
 
   displayName: "EntryDetails"
 
-  mixins: [ PureMixin ]
+  mixins: [ Pure ]
 
   render: ->
     { entry } = @props

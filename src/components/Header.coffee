@@ -3,7 +3,7 @@ require "./Header.styl"
 React     = require "react"
 SearchBar = require "./SearchBar"
 Menu      = require "./Menu"
-Pure      = require "react-pure-render/mixin"
+Pure      = require "react-addons-pure-render-mixin"
 
 { div, header, i, a } = React.DOM
 

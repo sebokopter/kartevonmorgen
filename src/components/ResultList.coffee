@@ -2,7 +2,7 @@
 
 React   = require "react"
 Actions = require "../Actions"
-Pure    = require "react-pure-render/mixin"
+Pure    = require "react-addons-pure-render-mixin"
 
 { NAMES, CSS_CLASSES } = require "../constants/Categories"
 
@@ -12,7 +12,7 @@ ResultListElement = React.createClass
 
   displayName: "ResultListElement"
 
-  mixins: [Pure]
+  mixins: [ Pure ]
 
   render: ->
     { id, highlight, title, description, category } = @props
@@ -34,7 +34,7 @@ module.exports = React.createClass
 
   displayName: "ResultList"
 
-  mixins: [Pure]
+  mixins: [ Pure ]
 
   render: ->
     { entries, highlight } = @props

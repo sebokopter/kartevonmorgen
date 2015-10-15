@@ -3,7 +3,7 @@
 require './SearchBar.styl'
 React     = require "react"
 T         = React.PropTypes
-PureMixin = require "react-pure-render/mixin"
+Pure      = require "react-addons-pure-render-mixin"
 
 { MAIN_IDS, NAMES, CSS_CLASSES } = require "../constants/Categories"
 
@@ -13,7 +13,7 @@ CategoryButtons = React.createClass
 
   displayName: "CategoryButtons"
 
-  mixins: [ PureMixin ]
+  mixins: [ Pure ]
 
   propTypes:
     active     : T.array
